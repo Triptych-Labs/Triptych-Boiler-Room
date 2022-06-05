@@ -11,7 +11,7 @@ export const MintPage: FC = () => {
     "6yvXsPY88f2BDRP3ZGhFC9rMt59K2yNdahFfXdRMy9gc"
   );
   const network = "devnet" as WalletAdapterNetwork;
-  const rpcHost = "https://psytrbhymqlkfrhudd.dev.genesysgo.net:8899/";
+  const rpcHost = "https://api.devnet.solana.com";
   const connection = new anc.web3.Connection(
     rpcHost ? rpcHost : anc.web3.clusterApiUrl("mainnet-beta")
   );
