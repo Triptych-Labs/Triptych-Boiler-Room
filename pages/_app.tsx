@@ -20,7 +20,7 @@ import { GlobalStyle } from "../src/utils/styleKit";
 // Use require instead of import since order matters
 require("@solana/wallet-adapter-react-ui/styles.css");
 require("../styles/globals.css");
-require("./wallet_adapter.css");
+require("../styles/wallet_adapter.css");
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
   // Can be set to 'devnet', 'testnet', or 'mainnet-beta'
@@ -61,3 +61,4 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
 };
 
 export default App;
+
