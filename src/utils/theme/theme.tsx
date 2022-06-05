@@ -26,14 +26,14 @@ export const Theme = {
     lineHeight: 1.5,
     h1: {
       fontFamily: "Lato",
-      color: grey[100],
+      color: process.env.NEXT_PUBLIC_TEXT_COLOR!,
       fontSize: "6rem",
       fontWeight: 400,
       lineHeight: 1.167,
       lettingSpacing: "-0.01562em",
     },
     body1: {
-      color: grey[800],
+      color: process.env.NEXT_PUBLIC_TEXT_COLOR!,
       fontSize: "2rem",
       fontWeight: 400,
     },
@@ -45,11 +45,11 @@ export const Theme = {
   palette: {
     mode: "light",
     primary: {
-      main: orange[500],
+      main: process.env.NEXT_PUBLIC_PRIMARY_PRIMARY_COLOR!,
     },
     secondary: {
       light: red[500],
-      main: red[700],
+      main: process.env.NEXT_PUBLIC_SECONDARY_PRIMARY_COLOR!,
       dark: red[900],
       contrastText: grey[50],
     },
@@ -60,7 +60,7 @@ export const Theme = {
       contrastText: grey[800],
     },
     success: {
-      main: green[500],
+      main: process.env.NEXT_PUBLIC_PRIMARY_SECONDARY_COLOR!,
     },
     warning: {
       main: yellow[500],
@@ -103,4 +103,3 @@ export const CreateTheme = () => {
 };
 
 export default Theme;
-

@@ -1,8 +1,33 @@
 import { createGlobalStyle } from "styled-components";
+import Theme from "./theme/theme";
 
 export const GlobalStyle = createGlobalStyle`
+.MuiTypography-caption {
+  color: ${Theme.typography.body1.color} !important;
+}
+button[class*="CTAButton"] {
+  color: ${Theme.typography.body1.color} !important;
+}
+.MuiTypography-colorTextSecondary {
+  color: ${Theme.typography.body1.color} !important;
+}
+.MuiTypography-colorTextPrimary {
+  color: ${Theme.typography.body1.color} !important;
+}
+
+.wallet-adapter-button {
+  color: ${Theme.typography.body1.color} !important;
+}
+.wallet-adapter-modal-wrapper {
+  background-color: ${Theme.palette.primary.main} !important;
+  color: ${Theme.typography.body1.color} !important;
+}
+
+#cmui-modal {
+  background-color: ${Theme.palette.secondary.main};
+}
 .App-header {
-  background-color: #282c34;
+  background-color: ${Theme.palette.primary.main};
   background: url("${process.env.PUBLIC_URL}/bac.png");
   min-height: 100vh;
   display: flex;

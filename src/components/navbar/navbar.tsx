@@ -14,6 +14,7 @@ const TopBar = styled.div`
   left: 0;
   width: 100%;
   background-color: ${Theme.palette.primary.main};
+  color: ${Theme.typography.body1.color};
 `;
 
 export const Navbar = () => {
