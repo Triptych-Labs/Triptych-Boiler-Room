@@ -28,7 +28,8 @@ button[class*="CTAButton"] {
 }
 .App-header {
   background-color: ${Theme.palette.primary.main};
-  background: url("${process.env.PUBLIC_URL}/bac.png");
+  background: url("${process.env.PUBLIC_URL}/${process.env.NEXT_PUBLIC_BACKGROUND_FILE}");
+  background-size: cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

@@ -3,10 +3,11 @@ import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import styled from "styled-components";
 import Theme from "../../utils/theme/theme";
+import Image from "next/image";
+import Link from "next/link";
 
 const TopBar = styled.div`
   position: fixed;
@@ -23,23 +24,25 @@ export const Navbar = () => {
       <TopBar>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="/"
+            <Box
               sx={{
-                mr: 2,
-                display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
-                fontWeight: 800,
-                letterSpacing: ".03rem",
-                color: "inherit",
-                textDecoration: "none",
+                position: "fixed",
+                height: "5%",
+                width: "25%",
               }}
             >
-              {String(process.env.NEXT_PUBLIC_PROJECT_NAME || "...")}
-            </Typography>
+              <Link href="/">
+                <a>
+                  <Image
+                    src={String("/" + process.env.NEXT_PUBLIC_LOGO_FILE)}
+                    width={300}
+                    layout="fill"
+                    objectFit="contain"
+                    alt="logo"
+                  />
+                </a>
+              </Link>
+            </Box>
 
             <Box
               sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}

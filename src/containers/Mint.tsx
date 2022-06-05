@@ -1,5 +1,4 @@
 import Home from "../vendor/cmui/Home";
-import { Box } from "@mui/material";
 
 // @ts-ignore
 export const Mint = ({ candyMachineId, connection, rpcHost, network }) => {
