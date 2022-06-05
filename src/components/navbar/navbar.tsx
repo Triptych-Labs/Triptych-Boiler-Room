@@ -34,7 +34,7 @@ export const Navbar = () => {
               <Link href="/">
                 <a>
                   <Image
-                    src={String("/" + process.env.NEXT_PUBLIC_LOGO_FILE)}
+                    src={process.env.NEXT_PUBLIC_LOGO_FILE}
                     width={300}
                     layout="fill"
                     objectFit="contain"
