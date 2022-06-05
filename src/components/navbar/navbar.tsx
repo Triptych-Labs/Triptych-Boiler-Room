@@ -37,7 +37,7 @@ export const Navbar = () => {
                 textDecoration: "none",
               }}
             >
-              NOT BORED APES
+              {String(process.env.NEXT_PUBLIC_PROJECT_NAME || "...")}
             </Typography>
 
             <Box

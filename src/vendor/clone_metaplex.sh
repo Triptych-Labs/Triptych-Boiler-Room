@@ -1,4 +1,5 @@
 #!/bin/zsh
+rm -rf ./metaplex
 mkdir -p ./cmui
 rm -rf ./cmui/**
 git clone git@github.com:metaplex-foundation/metaplex.git ./metaplex
