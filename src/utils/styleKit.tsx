@@ -16,14 +16,17 @@ button[class*="CTAButton"] {
 }
 
 .wallet-adapter-button {
+  font-family: "VT323" !important;
   color: ${Theme.typography.body1.color} !important;
 }
 .wallet-adapter-modal-wrapper {
+  font-family: "VT323" !important;
   background-color: ${Theme.palette.primary.main} !important;
   color: ${Theme.typography.body1.color} !important;
 }
 
 #cmui-modal {
+  font-family: "VT323" !important;
   background-color: ${Theme.palette.secondary.main};
 }
 .bg {

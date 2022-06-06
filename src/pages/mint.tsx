@@ -19,14 +19,16 @@ export const MintPage: FC = () => {
   return (
     <>
       <Navbar />
-      {publicKey && (
-        <Mint
-          candyMachineId={candyMachineId}
-          connection={connection}
-          rpcHost={rpcHost}
-          network={network}
-        />
-      )}
+      <div className="App-header">
+        {publicKey && (
+          <Mint
+            candyMachineId={candyMachineId}
+            connection={connection}
+            rpcHost={rpcHost}
+            network={network}
+          />
+        )}
+      </div>
     </>
   );
 };

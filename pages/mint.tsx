@@ -6,12 +6,9 @@ const Mint = () => {
   const theme = CreateTheme();
   return (
     <ThemeProvider theme={theme}>
-      <div className="App-header">
-        <MintPage />
-      </div>
+      <MintPage />
     </ThemeProvider>
   );
 };
 
 export default Mint;
-
