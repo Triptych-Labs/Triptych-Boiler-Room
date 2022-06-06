@@ -6,7 +6,8 @@ export const GlobalStyle = createGlobalStyle`
   color: ${Theme.typography.body1.color} !important;
 }
 button[class*="CTAButton"] {
-  color: ${Theme.typography.body1.color} !important;
+  background: ${Theme.palette.secondary.main} !important;
+  color: ${Theme.palette.secondary.contrastText} !important;
 }
 .MuiTypography-colorTextSecondary {
   color: ${Theme.typography.body1.color} !important;
@@ -18,6 +19,10 @@ button[class*="CTAButton"] {
 .wallet-adapter-button {
   font-family: "VT323" !important;
   color: ${Theme.typography.body1.color} !important;
+  background-color: ${Theme.palette.secondary.main} !important;
+}
+.wallet-adapter-button-trigger {
+  background-color: ${Theme.palette.secondary.main} !important;
 }
 .wallet-adapter-modal-wrapper {
   font-family: "VT323" !important;
@@ -50,7 +55,7 @@ button[class*="CTAButton"] {
   background: linear-gradient(
     180deg,
     ${Theme.palette.primary.main} 40%,
-    rgba(0, 255, 163, 0.3) 100%
+    rgba(0, 255, 163, 0.15) 100%
   );
   color: ${Theme.typography.body1.color};
 }
@@ -59,7 +64,7 @@ button[class*="CTAButton"] {
   color: ${Theme.palette.secondary.main};
 }
 #matrixrain-bg {
-  background: #00FFA3;
+  background: ${Theme.palette.primary.main};
 }
 
 h2, p {

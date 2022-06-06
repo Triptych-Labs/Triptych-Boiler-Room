@@ -51,7 +51,7 @@ export const Theme = {
       light: red[500],
       main: process.env.NEXT_PUBLIC_SECONDARY_PRIMARY_COLOR!,
       dark: red[900],
-      contrastText: grey[50],
+      contrastText: process.env.NEXT_PUBLIC_SECONDARY_SECONDARY_COLOR!,
     },
     error: {
       light: red[400],
