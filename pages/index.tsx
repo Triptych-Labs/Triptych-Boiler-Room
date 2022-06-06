@@ -1,15 +1,16 @@
-import MintPage from "../src/pages/mint";
+import HomePage from "../src/pages/home";
 import { CreateTheme } from "../src/utils/theme/theme";
 import { ThemeProvider } from "@mui/material/styles";
+import { Paper } from "@mui/material";
 
 const Index = () => {
   const theme = CreateTheme();
   return (
-    <ThemeProvider theme={theme}>
-      <div className="App-header">
-        <MintPage />
-      </div>
-    </ThemeProvider>
+    <>
+      <ThemeProvider theme={theme}>
+        <HomePage />
+      </ThemeProvider>
+    </>
   );
 };
 
