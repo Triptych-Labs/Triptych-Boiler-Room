@@ -1,7 +1,10 @@
 import MintPage from "../src/pages/mint";
 import { CreateTheme } from "../src/utils/theme/theme";
 import { ThemeProvider } from "@mui/material/styles";
-import { useQuestingWasm, useSomeplaceWasm } from "./wasm_loader_hooks";
+import {
+  useQuestingWasm,
+  useSomeplaceWasm,
+} from "../src/utils/wasm_loader_hooks";
 
 const Questing = () => {
   const theme = CreateTheme();

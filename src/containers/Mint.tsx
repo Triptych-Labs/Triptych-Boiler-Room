@@ -1,4 +1,4 @@
-import Home from "../vendor/cmui/Home";
+import Home from "../../vendor_modules/cmui/Home";
 
 // @ts-ignore
 export const Mint = ({ candyMachineId, connection, rpcHost, network }) => {
@@ -16,3 +16,4 @@ export const Mint = ({ candyMachineId, connection, rpcHost, network }) => {
 };
 
 export default Mint;
+

@@ -1,5 +1,5 @@
 import { Linktree } from "../components/cards";
-import MatrixRain from "../vendor/matrixrain/src/MatrixRain";
+import MatrixRain from "../../vendor_modules/matrixrain/src/MatrixRain";
 import { Grid } from "@mui/material";
 
 export const Home = () => {
@@ -51,3 +51,4 @@ export const Home = () => {
     </div>
   );
 };
+

@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 rm -rf ./metaplex
 mkdir -p ./cmui
 rm -rf ./cmui/**

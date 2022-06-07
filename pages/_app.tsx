@@ -20,7 +20,7 @@ import { GlobalStyle } from "../src/utils/styleKit";
 require("@solana/wallet-adapter-react-ui/styles.css");
 require("../styles/globals.css");
 require("../styles/wallet_adapter.css");
-require("../src/vendor/linkees/src/css/components.css");
+require("../vendor_modules/linkees/src/css/components.css");
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
   const network = WalletAdapterNetwork.Devnet;

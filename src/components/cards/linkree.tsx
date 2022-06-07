@@ -1,5 +1,5 @@
 import { StyledCard } from "./card";
-import Card from "../../vendor/linkees/src/components/Card";
+import Card from "../../../vendor_modules/linkees/src/components/Card";
 
 // @ts-ignore
 export const Linktree = ({ i, title, subtitle, link, cover }) => {
@@ -17,3 +17,4 @@ export const Linktree = ({ i, title, subtitle, link, cover }) => {
     </>
   );
 };
+
