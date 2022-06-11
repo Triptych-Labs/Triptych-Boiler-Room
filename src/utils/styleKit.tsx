@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
 }
 button[class*="CTAButton"] {
   background: ${Theme.palette.secondary.main} !important;
-  color: ${Theme.palette.secondary.contrastText} !important;
+  color: ${Theme.typography.body1.color} !important;
 }
 .MuiTypography-colorTextSecondary {
   color: ${Theme.typography.body1.color} !important;
@@ -32,7 +32,8 @@ button[class*="CTAButton"] {
 
 #cmui-modal {
   font-family: "VT323" !important;
-  background-color: ${Theme.palette.secondary.main};
+  background-color: ${Theme.palette.secondary.light};
+  box-shadow: 0px 0px 40px 10px ${Theme.palette.secondary.contrastText} !important;
 }
 .bg {
   background: url("${process.env.NEXT_PUBLIC_BACKGROUND_FILE}");
@@ -42,6 +43,7 @@ button[class*="CTAButton"] {
   background: url("${process.env.NEXT_PUBLIC_BACKGROUND_FILE}");
   background-color: ${Theme.palette.primary.main};
   background-size: cover;
+  background-position: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

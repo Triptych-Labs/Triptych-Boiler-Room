@@ -48,7 +48,7 @@ export const Theme = {
       main: process.env.NEXT_PUBLIC_PRIMARY_PRIMARY_COLOR!,
     },
     secondary: {
-      light: red[500],
+      light: process.env.NEXT_PUBLIC_PRIMARY_SECONDARY_COLOR!,
       main: process.env.NEXT_PUBLIC_SECONDARY_PRIMARY_COLOR!,
       dark: red[900],
       contrastText: process.env.NEXT_PUBLIC_SECONDARY_SECONDARY_COLOR!,
