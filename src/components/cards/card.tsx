@@ -3,7 +3,7 @@ import { Paper } from "@mui/material";
 import Theme from "../../utils/theme/theme";
 
 export const StyledCard = styled(Paper)({
-  background: Theme.palette.secondary.main,
+  background: Theme.palette.secondary.light,
   textAlign: "center",
   justifyContent: "center",
   padding: "10px",

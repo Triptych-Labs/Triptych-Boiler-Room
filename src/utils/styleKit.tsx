@@ -39,6 +39,12 @@ button[class*="CTAButton"] {
   background: url("${process.env.NEXT_PUBLIC_BACKGROUND_FILE}");
   min-height: 100vh;
 }
+.mint-container {
+  width: 100vw;
+  @media (min-width: 600px) {
+    padding-top: 80px;
+  }
+}
 .App-header {
   @media (max-width: 600px) {
     background: url("${process.env.NEXT_PUBLIC_BACKGROUND_MOBILE_FILE}");
