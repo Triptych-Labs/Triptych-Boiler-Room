@@ -2,22 +2,34 @@ import { createGlobalStyle } from "styled-components";
 import Theme from "./theme/theme";
 
 export const GlobalStyle = createGlobalStyle`
+@font-face {
+  font-family: 'Silkscreen';
+  src: url(${Theme.typography.url}) format('woff2');
+}
+
 .MuiTypography-caption {
+  font-family: 'Silkscreen' !important;
   color: ${Theme.typography.body1.color} !important;
 }
+.MuiTypography-body2 {
+  font-family: 'Silkscreen' !important;
+}
 button[class*="CTAButton"] {
+  font-family: 'Silkscreen' !important;
   background: ${Theme.palette.secondary.main} !important;
   color: ${Theme.typography.body1.color} !important;
 }
 .MuiTypography-colorTextSecondary {
+  font-family: 'Silkscreen' !important;
   color: ${Theme.typography.body1.color} !important;
 }
 .MuiTypography-colorTextPrimary {
+  font-family: 'Silkscreen' !important;
   color: ${Theme.typography.body1.color} !important;
 }
 
 .wallet-adapter-button {
-  font-family: "VT323" !important;
+  font-family: "Silkscreen" !important;
   color: ${Theme.typography.body1.color} !important;
   background-color: ${Theme.palette.secondary.main} !important;
 }
@@ -25,15 +37,15 @@ button[class*="CTAButton"] {
   background-color: ${Theme.palette.secondary.main} !important;
 }
 .wallet-adapter-modal-wrapper {
-  font-family: "VT323" !important;
+  font-family: "Silkscreen" !important;
   background-color: ${Theme.palette.primary.main} !important;
   color: ${Theme.typography.body1.color} !important;
 }
 
 #cmui-modal {
-  font-family: "VT323" !important;
+  font-family: "Silkscreen" !important;
   background-color: ${Theme.palette.secondary.light};
-  box-shadow: 0px 0px 40px 10px ${Theme.palette.secondary.contrastText} !important;
+  box-shadow: 0px 0px 40px 10px ${Theme.palette.secondary.main} !important;
 }
 .bg {
   background: url("${process.env.NEXT_PUBLIC_BACKGROUND_FILE}");
@@ -75,7 +87,7 @@ button[class*="CTAButton"] {
   color: ${Theme.typography.body1.color};
 }
 #matrixrain-column {
-  font-family: "VT323" !important;
+  font-family: "Silkscreen" !important;
   color: ${Theme.palette.secondary.main};
 }
 #matrixrain-bg {
@@ -85,4 +97,13 @@ button[class*="CTAButton"] {
 h2, p {
   color: ${Theme.typography.body1.color} !important;
 }
+
+html,
+body {
+  font-family: "Silkscreen" !important;
+  letter-spacing: -3px !important;
+  padding: 0;
+  margin: 0;
+}
+
 `;

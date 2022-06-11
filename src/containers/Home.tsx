@@ -29,6 +29,15 @@ export const Home = () => {
         <Grid item xs={4}>
           <Linktree
             i={1}
+            title={"Storefront"}
+            subtitle={"Buy NFTs for FedCoin!"}
+            link={"/storefront"}
+            cover={"/github.png"}
+          />
+        </Grid>
+        <Grid item xs={4}>
+          <Linktree
+            i={2}
             title={"P2P Marketplace"}
             subtitle={"Buy and Sell your NFT for FedCoin!"}
             link={"/marketplace"}
@@ -37,10 +46,10 @@ export const Home = () => {
         </Grid>
         <Grid item xs={4}>
           <Linktree
-            i={2}
+            i={3}
             title={"Questing"}
             subtitle={"A P2E Staking Game!"}
-            link={"/"}
+            link={"/questing"}
             cover={"/github.png"}
           />
         </Grid>
@@ -51,4 +60,3 @@ export const Home = () => {
     </div>
   );
 };
-

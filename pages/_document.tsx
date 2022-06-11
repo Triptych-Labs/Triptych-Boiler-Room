@@ -8,12 +8,9 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <Script src="/wasm_exec.js"></Script>
-        <link
-          href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
-          rel="stylesheet"
-        />
+        <script src="/wasm_exec.js"></script>
       </body>
     </Html>
   );
 }
+

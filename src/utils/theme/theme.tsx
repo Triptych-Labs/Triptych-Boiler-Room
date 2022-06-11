@@ -19,8 +19,9 @@ export const Theme = {
     },
   },
   typography: {
-    fontFamily: ["Helvetica", "arial"],
-    fontSize: 16,
+    url: process.env.NEXT_PUBLIC_TEXT_FONT_FILE!,
+    fontFamily: ["Pixel Caps"],
+    fontSize: 12,
     fontWeightRegular: 400,
     fontWeightBold: 700,
     lineHeight: 1.5,
@@ -34,7 +35,7 @@ export const Theme = {
     },
     body1: {
       color: process.env.NEXT_PUBLIC_TEXT_COLOR!,
-      fontSize: "2rem",
+      fontSize: "smaller",
       fontWeight: 400,
     },
   },
