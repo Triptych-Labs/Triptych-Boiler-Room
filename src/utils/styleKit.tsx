@@ -40,10 +40,17 @@ button[class*="CTAButton"] {
   min-height: 100vh;
 }
 .App-header {
-  background: url("${process.env.NEXT_PUBLIC_BACKGROUND_FILE}");
+  @media (max-width: 600px) {
+    background: url("${process.env.NEXT_PUBLIC_BACKGROUND_MOBILE_FILE}");
+    background-size: cover;
+    background-position: center;
+  }
+  @media (min-width: 600px) {
+    background: url("${process.env.NEXT_PUBLIC_BACKGROUND_FILE}");
+    background-size: cover;
+    background-position: center;
+  }
   background-color: ${Theme.palette.primary.main};
-  background-size: cover;
-  background-position: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
