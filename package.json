@@ -33,6 +33,7 @@
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.60",
+    "@metaplex-foundation/js-next": "0.9.0",
     "@project-serum/anchor": "^0.17.0",
     "@solana/spl-token": "^0.1.8",
     "@solana/wallet-adapter-base": "^0.9.4",
@@ -40,13 +41,15 @@
     "@solana/wallet-adapter-react": "^0.15.3",
     "@solana/wallet-adapter-react-ui": "^0.9.5",
     "@solana/wallet-adapter-wallets": "^0.16.1",
+    "@solana/web3.js": "^1.41.4",
     "@types/styled-components": "^5.1.25",
     "@use-it/interval": "^1.0.0",
     "babel-plugin-styled-components": "^2.0.7",
+    "buffer": "^6.0.3",
     "clsx": "^1.1.1",
     "framer-motion": "^6.3.10",
     "fs": "^0.0.1-security",
-    "next": "^12.1.0",
+    "next": "^12.1.6",
     "next-fonts": "^1.5.1",
     "postcss-import": "^14.1.0",
     "react": "^17.0.2",
@@ -63,5 +66,20 @@
     "eslint-config-next": "^12.0.7",
     "shx": "^0.3.3",
     "typescript": "^4.6.2"
+  },
+  "browserslist": {
+    "production": [
+      "chrome >= 67",
+      "edge >= 79",
+      "firefox >= 68",
+      "opera >= 54",
+      "safari >= 14"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
+

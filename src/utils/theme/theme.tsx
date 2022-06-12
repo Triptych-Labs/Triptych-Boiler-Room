@@ -20,11 +20,7 @@ export const Theme = {
   },
   typography: {
     url: process.env.NEXT_PUBLIC_TEXT_FONT_FILE!,
-    fontFamily: ["Pixel Caps"],
-    fontSize: 12,
-    fontWeightRegular: 400,
-    fontWeightBold: 700,
-    lineHeight: 1.5,
+    fontFamily: ["Silkscreen"],
     h1: {
       fontFamily: "Lato",
       color: process.env.NEXT_PUBLIC_TEXT_COLOR!,

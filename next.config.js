@@ -1,13 +1,16 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   reactStrictMode: true,
   webpack: (config) => {
     config.resolve = {
       ...config.resolve,
       fallback: {
-        fs: false,
-        path: false,
-        os: false,
+        buffer: true,
+        path: true,
+        os: true,
       },
     };
     return config;
@@ -27,4 +30,3 @@ module.exports = {
       process.env.NEXT_PUBLIC_SECONDARY_SECONDARY_COLOR,
   },
 };
-

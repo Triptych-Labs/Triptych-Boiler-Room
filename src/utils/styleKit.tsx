@@ -48,7 +48,16 @@ button[class*="CTAButton"] {
   box-shadow: 0px 0px 40px 10px ${Theme.palette.secondary.main} !important;
 }
 .bg {
-  background: url("${process.env.NEXT_PUBLIC_BACKGROUND_FILE}");
+  @media (max-width: 600px) {
+    background: url("${process.env.NEXT_PUBLIC_BACKGROUND_MOBILE_FILE}");
+    background-size: cover;
+    background-position: center;
+  }
+  @media (min-width: 600px) {
+    background: url("${process.env.NEXT_PUBLIC_BACKGROUND_FILE}");
+    background-size: cover;
+    background-position: center;
+  }
   min-height: 100vh;
 }
 .mint-container {
@@ -68,7 +77,6 @@ button[class*="CTAButton"] {
     background-size: cover;
     background-position: center;
   }
-  background-color: ${Theme.palette.primary.main};
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -101,9 +109,12 @@ h2, p {
 html,
 body {
   font-family: "Silkscreen" !important;
-  letter-spacing: -3px !important;
   padding: 0;
   margin: 0;
+}
+
+img {
+border-radius: unset !important;
 }
 
 `;

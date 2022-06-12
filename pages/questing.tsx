@@ -1,4 +1,4 @@
-import MintPage from "../src/pages/mint";
+import QuestingPage from "../src/pages/questing";
 import { CreateTheme } from "../src/utils/theme/theme";
 import { ThemeProvider } from "@mui/material/styles";
 import {
@@ -13,7 +13,7 @@ const Questing = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      {questing === "ready" && questing === storefront && <MintPage />}
+      {questing === "ready" && questing === storefront && <QuestingPage />}
     </ThemeProvider>
   );
 };

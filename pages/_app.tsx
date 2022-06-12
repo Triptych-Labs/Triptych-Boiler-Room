@@ -1,3 +1,4 @@
+import { RecoilRoot } from "recoil";
 import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 import {
   ConnectionProvider,
@@ -16,6 +17,8 @@ import { clusterApiUrl } from "@solana/web3.js";
 import { AppProps } from "next/app";
 import { FC, useMemo } from "react";
 import { GlobalStyle } from "../src/utils/styleKit";
+
+import "abort-controller/polyfill";
 
 require("@solana/wallet-adapter-react-ui/styles.css");
 require("../styles/globals.css");
@@ -38,19 +41,21 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
   );
 
   return (
-    <ConnectionProvider endpoint={endpoint}>
-      <WalletProvider wallets={wallets} autoConnect>
-        <WalletModalProvider>
-          <WalletDialogProvider>
-            <GlobalStyle />
-            {
-              //@ts-ignore
-              <Component {...pageProps} />
-            }
-          </WalletDialogProvider>
-        </WalletModalProvider>
-      </WalletProvider>
-    </ConnectionProvider>
+    <RecoilRoot>
+      <ConnectionProvider endpoint={endpoint}>
+        <WalletProvider wallets={wallets} autoConnect>
+          <WalletModalProvider>
+            <WalletDialogProvider>
+              <GlobalStyle />
+              {
+                //@ts-ignore
+                <Component {...pageProps} />
+              }
+            </WalletDialogProvider>
+          </WalletModalProvider>
+        </WalletProvider>
+      </ConnectionProvider>
+    </RecoilRoot>
   );
 };
 
