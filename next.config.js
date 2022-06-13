@@ -8,9 +8,9 @@ module.exports = {
     config.resolve = {
       ...config.resolve,
       fallback: {
-        buffer: true,
-        path: true,
-        os: true,
+        fs: false,
+        path: false,
+        os: false,
       },
     };
     return config;
@@ -30,3 +30,4 @@ module.exports = {
       process.env.NEXT_PUBLIC_SECONDARY_SECONDARY_COLOR,
   },
 };
+
