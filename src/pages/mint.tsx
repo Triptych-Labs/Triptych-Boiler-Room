@@ -8,10 +8,10 @@ import { useWallet } from "@solana/wallet-adapter-react";
 export const MintPage: FC = () => {
   const { publicKey } = useWallet();
   const candyMachineId = new anc.web3.PublicKey(
-    "9NKrVetvT8zJ1pTR2zQoM5BpSMaVFBNQQUYmuNufgeaA"
+    "3PpmvYVh1Fabhvr3HZ9yYKoazMCvZ42E5TdzRxKXNwdQ"
   );
-  const network = "devnet" as WalletAdapterNetwork;
-  const rpcHost = "https://api.devnet.solana.com";
+  const network = "mainnet-beta" as WalletAdapterNetwork;
+  const rpcHost = "https://ssc-dao.genesysgo.net";
   const connection = new anc.web3.Connection(
     rpcHost ? rpcHost : anc.web3.clusterApiUrl("mainnet-beta")
   );

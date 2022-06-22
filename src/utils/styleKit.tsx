@@ -7,6 +7,10 @@ export const GlobalStyle = createGlobalStyle`
   src: url(${Theme.typography.url}) format('woff2');
 }
 
+#mui-2 {
+  color: white !important;
+}
+
 .MuiTypography-caption {
   font-family: 'Silkscreen' !important;
   color: ${Theme.typography.body1.color} !important;
@@ -16,8 +20,7 @@ export const GlobalStyle = createGlobalStyle`
 }
 button[class*="CTAButton"] {
   font-family: 'Silkscreen' !important;
-  background: ${Theme.palette.secondary.main} !important;
-  color: ${Theme.typography.body1.color} !important;
+  background: #ffffff !important;
 }
 .MuiTypography-colorTextSecondary {
   font-family: 'Silkscreen' !important;

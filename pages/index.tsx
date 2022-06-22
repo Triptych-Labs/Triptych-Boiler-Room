@@ -1,17 +1,14 @@
-import HomePage from "../src/pages/home";
+import MintPage from "../src/pages/mint";
 import { CreateTheme } from "../src/utils/theme/theme";
 import { ThemeProvider } from "@mui/material/styles";
-import { Paper } from "@mui/material";
 
-const Index = () => {
+const Mint = () => {
   const theme = CreateTheme();
   return (
-    <>
-      <ThemeProvider theme={theme}>
-        <HomePage />
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={theme}>
+      <MintPage />
+    </ThemeProvider>
   );
 };
 
-export default Index;
+export default Mint;
