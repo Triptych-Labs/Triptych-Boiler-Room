@@ -1,5 +1,5 @@
-import { styled } from "@mui/system";
-import { Paper } from "@mui/material";
+import {styled} from "@mui/system";
+import {Paper} from "@mui/material";
 import Theme from "../../utils/theme/theme";
 
 export const StyledCard = styled(Paper)({
@@ -9,4 +9,5 @@ export const StyledCard = styled(Paper)({
   justifyContent: "center",
   padding: "10px",
   margin: "10px",
+  borderRadius: "25px",
 });

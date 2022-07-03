@@ -53,6 +53,15 @@ export const Home = () => {
             cover={"/github.png"}
           />
         </Grid>
+        <Grid item xs={4}>
+          <Linktree
+            i={4}
+            title={"Raffles"}
+            subtitle={"Raffle Opportunities!"}
+            link={"/raffles"}
+            cover={"/github.png"}
+          />
+        </Grid>
       </Grid>
       <div style={{ zIndex: -1 }}>
         <MatrixRain />

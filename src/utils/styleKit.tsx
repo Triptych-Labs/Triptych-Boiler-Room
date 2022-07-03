@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import {createGlobalStyle} from "styled-components";
 import Theme from "./theme/theme";
 
 export const GlobalStyle = createGlobalStyle`
@@ -47,6 +47,42 @@ button[class*="CTAButton"] {
   background-color: ${Theme.palette.secondary.light};
   box-shadow: 0px 0px 40px 10px ${Theme.palette.secondary.main} !important;
 }
+
+.raffles-featured-box {
+  box-shadow: 0px 0px 40px 10px ${Theme.palette.secondary.main} !important;
+}
+
+.raffles-featured-card {
+  box-shadow: 0px 0px 40px 10px ${Theme.typography.body1.color} !important;
+}
+
+.raffle-information-box {
+  box-shadow: 0px 0px 40px 10px ${Theme.typography.body1.color} !important;
+}
+
+.raffle-information-card {
+  height: 100%;
+  box-shadow: 0px 0px 40px 10px ${Theme.palette.secondary.main} !important;
+}
+
+.raffle-information-modal {
+  height: 100%;
+  box-shadow: 0px 0px 40px -10px ${Theme.palette.secondary.main} !important;
+}
+.xquesting-enrollment-card {
+  padding: 20px;
+  box-shadow: 0px 0px 40px 10px ${Theme.palette.primary.main} !important;
+}
+.xquesting-enrollment-box {
+  padding: 20px;
+  box-shadow: 0px 0px 40px 10px ${Theme.palette.primary.main} !important;
+}
+
+.bg-solid {
+  background-color: ${Theme.palette.secondary.light} !important;
+  min-height: 100vh;
+}
+
 .bg {
   @media (max-width: 600px) {
     background: url("${process.env.NEXT_PUBLIC_BACKGROUND_MOBILE_FILE}");
@@ -55,6 +91,19 @@ button[class*="CTAButton"] {
   }
   @media (min-width: 600px) {
     background: url("${process.env.NEXT_PUBLIC_BACKGROUND_FILE}");
+    background-size: cover;
+    background-position: center;
+  }
+  min-height: 100vh;
+}
+.xquestingbg {
+  @media (max-width: 600px) {
+    background: url("${process.env.NEXT_PUBLIC_XQUESTING_BACKGROUND_MOBILE_FILE}");
+    background-size: cover;
+    background-position: center;
+  }
+  @media (min-width: 600px) {
+    background: url("${process.env.NEXT_PUBLIC_XQUESTING_BACKGROUND_FILE}");
     background-size: cover;
     background-position: center;
   }
@@ -115,6 +164,24 @@ body {
 
 img {
 border-radius: unset !important;
+width: 50% !important;
+height: auto;
+}
+
+.grid-item {
+  width: 100%;
+  height: 100%;
+  z-index: 1000000;
+  box-sizing: border-box;
+}
+
+.dropzone {
+  flex: 1;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
+
+.undefined {
 }
 
 `;

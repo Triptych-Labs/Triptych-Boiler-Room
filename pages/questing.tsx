@@ -1,6 +1,6 @@
 import QuestingPage from "../src/pages/questing";
-import { CreateTheme } from "../src/utils/theme/theme";
-import { ThemeProvider } from "@mui/material/styles";
+import {CreateTheme} from "../src/utils/theme/theme";
+import {ThemeProvider} from "@mui/material/styles";
 import {
   useQuestingWasm,
   useSomeplaceWasm,
