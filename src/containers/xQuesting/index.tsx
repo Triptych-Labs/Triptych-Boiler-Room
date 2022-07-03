@@ -932,10 +932,7 @@ export const QuestsGallery = () => {
                   </StyledCard>
                 </Grid>
                 {questsProposals.hasOwnProperty(questSelection) && (
-                  (globalEnum !== "recover" &&
-                    questsProposals[questSelection].filter(
-                      (item) => !item.Started && !item.Withdrawn
-                    ).length > 0) ||
+                  (globalEnum === "manage" && nftsSelection.length > 0) ||
                   (globalEnum === "recover" &&
                     questsProposals[questSelection].filter(
                       (item) => !item.Started && !item.Withdrawn
