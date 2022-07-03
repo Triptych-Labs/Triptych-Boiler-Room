@@ -6,7 +6,7 @@ import {
   useSomeplaceWasm,
 } from "../src/utils/wasm_loader_hooks";
 
-const xQuesting = () => {
+const XQuesting = () => {
   const theme = CreateTheme();
   const questing = useQuestingWasm();
   const storefront = useSomeplaceWasm();
@@ -18,4 +18,4 @@ const xQuesting = () => {
   );
 };
 
-export default xQuesting;
+export default XQuesting;
