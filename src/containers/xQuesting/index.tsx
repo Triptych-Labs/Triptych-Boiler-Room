@@ -337,7 +337,7 @@ export const QuestsGallery = () => {
 
       let myNfts = await Promise.all(
         (
-          await Metaplex.make(new Connection("https://devnet.genesysgo.net"))
+          await Metaplex.make(new Connection("https://api.devnet.solana.com"))
             .nfts()
             //@ts-ignore
             .findAllByOwner(wallet.publicKey.toBase58())
@@ -638,12 +638,12 @@ export const QuestsGallery = () => {
   );
   const onReward = useCallback(
     (_, quest) => {
+      setGlobalEnum("reward");
       setQuestsSelection(quest);
       setShowStarted(true);
       setShowCompleted(true);
       setResync(resync + 1);
       setQuestsProgression(-1);
-      setGlobalEnum("reward");
     },
     [
       resync,
@@ -884,10 +884,7 @@ export const QuestsGallery = () => {
 
       cols += 1;
     }
-    if (nftsSelection.length > 0) {
-      cols += 1;
-    }
-    if (nftsSelection.length > 0 && globalEnum === "recover") {
+    if (recoveryState.filter((item) => item).length > 0 && globalEnum === "recover") {
       cols += 1;
     }
 
@@ -932,7 +929,8 @@ export const QuestsGallery = () => {
                   </StyledCard>
                 </Grid>
                 {questsProposals.hasOwnProperty(questSelection) && (
-                  (globalEnum === "manage" && nftsSelection.length > 0) ||
+                  (globalEnum === "manage" && recoveryState.filter((item) => item).length > 0) ||
+                  (globalEnum === "reward" && recoveryState.filter((item) => item).length > 0) ||
                   (globalEnum === "recover" &&
                     questsProposals[questSelection].filter(
                       (item) => !item.Started && !item.Withdrawn

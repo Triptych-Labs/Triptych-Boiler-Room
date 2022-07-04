@@ -59,7 +59,7 @@ export function UseDroppable(props) {
     ...style,
     ...props.styles || {},
     background: 'rgba(0, 0, 0, 0)',
-    minHeight: '100%',
+    minHeight: '50%',
     height: props.items.length === 0 ? '200px' : 'max-content',
   }
 
@@ -137,6 +137,7 @@ export const NFTGalleryItems = ({onSelection}) => {
         let offchainMetadata = {image: "", properties: {creators: []}};
         try {
           offchainMetadata = (await axios.get(nft.uri)).data
+          console.log(nft.name, nft.uri, offchainMetadata.properties.creators[0].address, offchainMetadata);
         } catch (e) {
           offchainMetadata.properties.creators.push({address: ""});
           console.log("fail");
@@ -160,7 +161,7 @@ export const NFTGalleryItems = ({onSelection}) => {
             return Object.values(items.genTwoStaking).findIndex((stakedItem) => stakedItem.id === item.id) === -1
           })
           .filter((item) => {
-            return item.offchainMetadata.properties.creators[0].address !== "2zJ3v9EHP5eStxMF7qkPS8KX4uUU9JTqk74F987XmkAo"
+            return item.offchainMetadata.properties.creators[0].address === "Gzr2ebsdPQJ15yWwpC4fFan7AmmFDvzQfkQ3qSGmknZ3"
           }),
       })
     }
@@ -338,6 +339,10 @@ export const NFTGalleryItems = ({onSelection}) => {
     const activeContainer = findContainer(activeId);
     const overContainer = findContainer(overId);
     console.log(activeContainer, overContainer);
+
+    if ((activeContainer === "genOneDraggable" || activeContainer === "genOneStaking") === (overContainer === "genTwoDraggable" || overContainer === "genTwoStaking")) {
+      return;
+    }
 
     if (
       !activeContainer ||

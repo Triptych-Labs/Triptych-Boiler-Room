@@ -109,12 +109,6 @@ button[class*="CTAButton"] {
   }
   min-height: 100vh;
 }
-.mint-container {
-  width: 100vw;
-  @media (min-width: 600px) {
-    padding-top: 80px;
-  }
-}
 .App-header {
   @media (max-width: 600px) {
     background: url("${process.env.NEXT_PUBLIC_BACKGROUND_MOBILE_FILE}");
@@ -184,4 +178,17 @@ height: auto;
 .undefined {
 }
 
+.swap-container {
+  background-image: linear-gradient(var(--gradient-rotate, 246deg), rgb(218 46 239) 7.97%, rgb(43 106 255) 49.17%, rgb(57 208 216) 92.1%);
+}
+.swap-card {
+  background-image: linear-gradient(140.14deg,rgb(0 182 191 / 15%),rgb(27 22 89 / 10%) 86.61%),linear-gradient(321.82deg,rgb(24 19 77),rgb(27 22 89));
+}
+.MuiMenu-list {
+  background-color: linear-gradient(140.14deg,rgb(0 182 191 / 15%),rgb(27 22 89 / 10%) 86.61%),linear-gradient(321.82deg,rgb(24 19 77),rgb(27 22 89)) !important;
+  background: linear-gradient(140.14deg,rgb(0 182 191 / 15%),rgb(27 22 89 / 10%) 86.61%),linear-gradient(321.82deg,rgb(24 19 77),rgb(27 22 89)) !important;
+}
+.MuiInputBase-input {
+color: ${Theme.typography.body1.color};
+}
 `;

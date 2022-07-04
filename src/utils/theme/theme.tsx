@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material/styles";
+import {createTheme} from "@mui/material/styles";
 import {
   red,
   orange,
@@ -21,10 +21,11 @@ export const Theme = {
   typography: {
     url: process.env.NEXT_PUBLIC_TEXT_FONT_FILE!,
     fontFamily: ["Silkscreen"],
+    fontSize: "12rem",
     h1: {
       fontFamily: "Lato",
       color: process.env.NEXT_PUBLIC_TEXT_COLOR!,
-      fontSize: "6rem",
+      fontSize: "12rem",
       fontWeight: 400,
       lineHeight: 1.167,
       lettingSpacing: "-0.01562em",

@@ -65,7 +65,7 @@ export const QuestedGalleryItems = ({onSelection}) => {
           break;
         }
         case "manage": {
-          purgatory = questsProposals[questSelection].filter(({Started, Withdrawn}) => Started && !Withdrawn);
+          purgatory = questsProposals.hasOwnProperty(questSelection) ? questsProposals[questSelection].filter(({Started, Withdrawn}) => Started && !Withdrawn) : [];
           break;
         }
         case "reward": {
@@ -155,6 +155,7 @@ export const QuestedGalleryItems = ({onSelection}) => {
                 <Button
                   style={{fontSize: '1.1rem'}}
                   onClick={(event) => {
+                    console.log(".........");
                     setRecoveryState((prev) => {
                       const clone = Object.assign([], prev)
                       clone[pairIndex] = !clone[pairIndex];

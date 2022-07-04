@@ -1,8 +1,8 @@
-import { Box } from "@mui/material";
+import {Box} from "@mui/material";
 import Home from "../../vendor_modules/cmui/Home";
 
 // @ts-ignore
-export const Mint = ({ candyMachineId, connection, rpcHost, network }) => {
+export const Mint = ({candyMachineId, connection, rpcHost, network}) => {
   return (
     <Box className="mint-container">
       <Home

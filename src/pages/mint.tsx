@@ -8,7 +8,7 @@ import { useWallet } from "@solana/wallet-adapter-react";
 export const MintPage: FC = () => {
   const { publicKey } = useWallet();
   const candyMachineId = new anc.web3.PublicKey(
-    "6yvXsPY88f2BDRP3ZGhFC9rMt59K2yNdahFfXdRMy9gc"
+    "4Ei6S1UzKdJB5jEQ62YJYBAirVTnivoqFDyFFRaqbzQ6"
   );
   const network = "devnet" as WalletAdapterNetwork;
   const rpcHost = "https://api.devnet.solana.com";
